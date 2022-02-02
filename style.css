@@ -1,21 +1,22 @@
 	/* COLOR # */
-		/*  peach #fed49a r(254, 212, 154)  */
-		/*  white #fbfffe r(251, 255, 254)  */
-		/*  grey #7d8570 r(125, 133, 112)  */
-		/*  red #a40606 r(164, 6, 6)  */
-		/*  black #fbfffe r(0, 0, 0)  */
+		/*  peach #fed49a rgba(254, 212, 154)  */
+		/*  white #fbfffe rgba(251, 255, 254)  */
+		/*  grey #7d8570 rgba(125, 133, 112)  */
+		/*  red #a40606 rgba(164, 6, 6)  */
+		/*  black #fbfffe rgba(0, 0, 0)  */
 		/*  gold #FFf77a  */
 
 /* NOTES */
 
 /* GENERAL */
 
+
 	body
 		{background-color: #000000;
 		maring: 0;
 		padding: 0;
 		display: block;	/* MANDATORY FOR FIXED POS */
-		width: 100%;}
+		max-width: 100vw;}
 
 
 /* START: MAIN MENU */
@@ -23,21 +24,22 @@
 	.main-menu
 		{background-color: #000000;
 		position: fixed;	/* STATIONARY ON SCREEN ON SCROLL */
-		top: 0;
+		top: 255px;
 		left: 0;
-		width: 2.7em;
-		height: 2.7em;
-		border-radius: 10px;
+		width: 3.35em;
+		height: 3.15em;
+		border-radius: .6rem;
 		overflow: hidden;
 		white-space: nowrap;	/* TEXT WRAPPING */
-		box-shadow: 0px 0px 20px 3px #ffffff;
+		box-shadow: 0px 0px 20px 3px #FFf77a;
 		transition: .3s ease;
-		margin: 15px;}
+		margin: 1.6rem;
+		z-index: 1;}
 
 	.main-menu:hover
 		{width: fit-content;
 		height: fit-content;
-		box-shadow: 0px 0px 20px 3px #ffffff;}
+		box-shadow: 0px 0px 20px 3px #FFf77a;}
 
 	.main-menu:hover:active
 		{width: fit-content;
@@ -45,18 +47,18 @@
 		box-shadow: 0px 0px 0px #000000;}
 
 	.main-menu .main-menu-item
-		{padding-top: 1.2px;
-		padding-bottom: 2px;
-		padding-right: 2px;
-		padding-left: 4px;
-		margin: 2px;
-		font-size: 2.2rem;
+		{padding-top: .0635rem;
+		padding-bottom: .125rem;
+		padding-right: .2rem;
+		padding-left: .5rem;
+		margin: .125rem;
+		font-size: 2.5rem;
 		color: #FFf77a;}
 
 	.main-menu a
 		{font-family: 'Comforter', cursive;
-		padding-left: 15px;
-		padding-right: 15px;}
+		padding-left: 1.3rem;
+		padding-right: .9rem;}
 
 	.main-menu a:link
 		{color: #000000;
@@ -76,9 +78,96 @@
 	.main-menu a:active
 		{color: #a40606;
 		background-color: transparent;
-		font-size: 2.8rem;
-		font-weight: bold;
-		transition: .3s ease;}
+		font-size: 3rem;
+		font-weight: bold;}
 
 /* END: MAIN MENU */
+/* START: THEATRE SIGN */
+
+		.theatre-sign-base
+			{background-color: #a40606;
+			min-width: 100vw;
+			max-width: 100vw;
+			height: 16rem;
+			margin: 0;
+			top: 0;
+			left: 0;
+			display: block;
+			position: absolute;
+			white-space: nowrap;
+			box-sizing: border-box;}
+
+		#outer.theatre-sign-underglow
+			{min-width: calc(100vw - 1em);
+			height: 15rem;
+			margin-left: 0;
+			padding: 0;
+			display: inline-block;
+			position: absolute;
+			box-shadow: 0px 0px 20px 3px #FFf77a;
+			text-align: center;
+			border-style: dotted;
+			border-color: #FFf77a;
+			border-width: .8em;
+			white-space: nowrap;
+			box-sizing: border-box;}
+
+		#inner.theatre-sign-underglow
+			{min-width: calc(100vw - 1em);
+			height: 15rem;
+			margin-left: 0;
+			padding: 0;
+			display: inline-block;
+			position: absolute;
+			box-shadow: 0px 0px 20px 3px #FFf77a inset;
+			text-align: center;
+			border-style: dotted;
+			border-color: #FFf77a;
+			border-width: .8em;
+			white-space: nowrap;
+			box-sizing: border-box;}
+
+		.gold-text
+			{min-width: calc(100vw - 1em);
+			height: 15rem;
+			top: 10px;
+			margin: 20;
+			margin-left: 1rem;
+			padding: 1rem;
+			display: inline-block;
+			position: absolute;
+			text-align: center;
+			white-space: nowrap;
+			box-sizing: border-box;
+			font-size: 10vh;
+			color: #FFf77a;
+font-family: 'Neonderthaw', cursive;
+letter-spacing: -3px;}
+
+		.gold-text span
+			{font-size: 2vh;}
+
+		.gold-text:hover
+			{min-width: calc(100vw - 1em);
+			height: 15rem;
+			margin-left: 0;
+			padding: 1rem;
+			display: inline-block;
+			position: absolute;
+			text-align: center;
+			white-space: nowrap;
+			box-sizing: border-box;
+			font-size: 10vh;
+			color: #FFf77a;}
+
+		.gold-text:hover span
+			{font-size: 10vh;
+			color: #FFf77a;}
+
+
+
+/* END: THEATRE SIGN */
+/* START: MOVIE POSTER */
+
+/* END: MOVIE POSTER */
 
